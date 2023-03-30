@@ -1,25 +1,25 @@
 #include "main.h"
 
 /**
- * leet - encodes a string into 1337
+ * leet - function encodes a string into 1337
+ *
  * @s: string to encode
  *
- * Return: address of s
+ * Return: s
  */
 char *leet(char *s)
 {
-        int i, j;
-        char a[] = "aAeEoOtTlL";
-        char b[] = "4433007711";
-        for (i = 0; *(s + i); i++)
-	{
-		for (j = 0; j <= 9; j++)
-		{
+	int i, d;
+	char c[] = "aAeEoOtTlL";
+	char l[] = "4433007711";
 
-                        if (a[j] == s[i])
-                                s[i] = b[j];
-                }
-        }
-        return (s);
+	for (i = 0; *(s + i); i++)
+	{
+		for (d = 0; d <= 9; d++)
+		{
+			if (c[d] == s[i])
+				s[i] = l[d];
+		}
+	}
+	return (s);
 }
-/* Doing hard things is a must */
